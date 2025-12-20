@@ -1,13 +1,11 @@
-
+//Vigener Cipher
 
 const alphabets = {
     en: 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ .,!?',
     ua: 'абвгґдеєжзиіїйклмнопрстуфхцчшщьюяАБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЬЮЯ .,!?',
-    ru: 'абвгдеёжзийклмнопрстуфцчшщьыъэюяАБВГДЕ ЖЗИЙКЛМНОПРСТУФЦЧШЩЬЫЪЭЮЯ .,!?',
+    ru: 'абвгдеёжзийклмнопрстуфцчшщьыъэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФЦЧШЩЬЫЪЭЮЯ .,!?',
 }
 
-
-//Vigener Cipher
 function genPass(language, length) {
     if (language !== 'en' && language !== 'ru' && language !== 'ua') return 'Chouse the language from\n-ru\n-ua\n-en';
     const lan = alphabets[language];
@@ -71,22 +69,3 @@ function VigenerDecoder(pass, text, language) {
     }
     return newText;
 }
-
-// const codedText = VigenereEncoder(key, text);
-// console.log(codedText);
-// console.log(VigenerDecoder(key, codedText));
-
-// console.log(VigenerDecoder('мій ключ',VigenereEncoder('мій ключ','це мій Перший Текс щоб','ua'),'ua'));
-// console.log(VigenerDecoder('Elegant key form',VigenereEncoder('Elegant key form','This text for trying hihi','en'),'en'));
-
-const pass = genPass('en', 15);
-console.log(pass,'Password');
-const pass2 = genPass('ua',15);
-
-// console.log(VigenerDecoder(pass,VigenereEncoder(pass,'This text for trying h_Ih_I','en'),'en'));
-// console.log(VigenerDecoder(pass,VigenereEncoder(pass,'хаха привет сможеш меня взломать','ru'),'ru'));
-
-
-console.log(VigenerDecoder(pass2,VigenereEncoder(pass,'аааа','ua'),'ua'));
-// console.log(VigenerDecoder(pass,VigenereEncoder(pass,'аааа','ru'),'ru'));
-// console.log(VigenerDecoder(pass,VigenereEncoder(pass,'aaaa','en'),'en'));

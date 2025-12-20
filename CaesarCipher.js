@@ -1,4 +1,6 @@
 
+//Caesar Ciper
+
 const alphabets = {
     en: 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ .,!?',
     ua: 'абвгґдеєжзиіїйклмнопрстуфхцчшщьюяАБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЬЮЯ .,!?',
@@ -6,7 +8,6 @@ const alphabets = {
 }
 
 
-//Caesar Ciper
 function caesarEncoder(shift, text, language) {
     if (language !== 'en' && language !== 'ru' && language !== 'ua') return 'Chouse the language from\n-ru\n-ua\n-en';
     if (!shift) return 'Enter shift';
@@ -58,12 +59,3 @@ function bruteForceCaesar(text, language) {
         console.log(phrase,`Shift: ${shift}`);
     }
 }
-
-
-bruteForceCaesar('Wklv!lv!d!whvwb','en');
-console.log(caesarEncoder(3,'This is a test!','en'));
-console.log(caesarDecoder(3,'Wklv!lv!d!whvwb','en'));
-console.log(caesarDecoder(7, caesarEncoder(7, 'Привіт мій друже чому ті ще тут', 'ua'), 'ua'));
-console.log(caesarDecoder(7, caesarEncoder(7, 'Hi my test is ok? I wonna now it', 'en'), 'en'));
-console.log(caesarDecoder(7, caesarEncoder(7, 'Хей халоп як тобі живется чому ті тут не сядеш и помреш', 'ua'), 'ua'));
-

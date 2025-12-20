@@ -1,5 +1,8 @@
 
 // Atbash cipher
+
+
+
 function atbashEncoder(text, language) {
     if (language !== 'en' && language !== 'ru' && language !== 'ua') return 'Chouse the language from\n-ru\n-ua\n-en';
     if (!text) return 'Enter string';
@@ -52,11 +55,4 @@ function atbashDecoder(text, language) {
     }
     return newText;
 }
-
-
-// console.log(atbashEncoder('hello world i am here try to catch me hihi', 'en'));
-// console.log(atbashDecoder('svool dliow r zn sviv gib gl xzgxs nv srsr', 'en'));
-console.log(atbashEncoder('чого не тусите зі мною яже шороший','ua'));
-console.log(atbashDecoder('дкщк лц изітиц ус млкб афц ґкїкґтп','ua'));
-
 
