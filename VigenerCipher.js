@@ -1,4 +1,25 @@
 //Vigener Cipher
+// Principle: a polyalphabetic cipher using a key.
+
+// Each letter of the text is shifted by the position of the corresponding letter of the key.
+
+// Essentially, it’s like multiple Caesar ciphers with different shifts, repeated according to the key.
+
+// Example:
+// Text: HELLO
+
+// Key: KEY (repeated to match text → KEYKE)
+
+// Encryption formula: (text_letter_index + key_letter_index) % alphabet_length
+
+// Features:
+
+// Much harder to break than Caesar.
+
+// If the key is long and random, it becomes nearly unbreakable without knowing the key.
+
+// Historically known as the “Vigenère table” or “Vigenère square”.
+
 
 const alphabets = {
     en: 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ .,!?',

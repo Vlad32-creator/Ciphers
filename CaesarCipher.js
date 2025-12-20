@@ -1,5 +1,25 @@
 
 //Caesar Ciper
+// Principle: shift letters of the alphabet by a fixed number of positions.
+
+// Named after Julius Caesar, who used it for secret messages.
+
+// Usually a shift of 3, but it can be any number.
+
+// Example with English alphabet and a shift of 3:
+
+// Alphabet:  ABCDEFGHIJKLMNOPQRSTUVWXYZ
+// Cipher:    DEFGHIJKLMNOPQRSTUVWXYZABC
+
+// A → D, B → E, C → F…
+
+// Decoding is done by shifting in the opposite direction.
+
+// Features:
+
+// Simple and clear, but easy to break by trying all possibilities (25 for English alphabet).
+
+// Can be made more complex by using different shifts for different letters (this is closer to the Vigenère cipher).
 
 const alphabets = {
     en: 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ .,!?',

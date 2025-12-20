@@ -1,7 +1,27 @@
 
 // Atbash cipher
 
+// Principle: mirror reflection of the alphabet.
 
+// The first letter becomes the last, the second becomes the second-to-last, and so on.
+
+// Example for the English alphabet:
+
+// Alphabet:  ABCDEFGHIJKLMNOPQRSTUVWXYZ
+// Atbash:    ZYXWVUTSRQPONMLKJIHGFEDCBA
+
+
+// So A → Z, B → Y, C → X…
+
+// Features:
+
+// Very simple, almost never used in serious cryptography.
+
+// Easily broken by brute force since it’s just a simple letter substitution.
+
+// Example:
+
+// Hello → Svool
 
 function atbashEncoder(text, language) {
     if (language !== 'en' && language !== 'ru' && language !== 'ua') return 'Chouse the language from\n-ru\n-ua\n-en';
