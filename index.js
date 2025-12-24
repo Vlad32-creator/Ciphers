@@ -150,7 +150,7 @@ caesarDecodeBtn.addEventListener('click', () => {
 //Enter
 function enter(cipher){
     navigator.clipboard.readText().
-    then(text => document.getElementById(`input${cipher}`).innerText = text).
+    then(text => document.getElementById(`input${cipher}`).value = text).
     catch(err => console.log(err));
 }
 document.getElementById('EnterAtbash').addEventListener('click',() => enter('Atbash'));
