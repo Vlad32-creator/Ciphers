@@ -1,0 +1,1 @@
+console.log(Xor('hello my friends','key'));

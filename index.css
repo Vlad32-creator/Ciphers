@@ -24,7 +24,6 @@ button {
 
 #mainWrapper {
     width: 100%;
-    /* background-color: blue; */
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -48,7 +47,6 @@ button {
     background-color: transparent;
     border: none;
     height: 100%;
-    /* background-color: red; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,6 +63,9 @@ main {
     height: 90%;
     text-align: center;
 }
+#xor{
+    animation: append 1s ease;
+}
 
 /*Vigener part*/
 #vigener {
@@ -75,7 +76,6 @@ main {
     width: 100%;
     height: 100%;
     gap: 5px;
-    /* background-color: blue; */
     animation: append 1s ease;
 }
 
@@ -88,15 +88,6 @@ textarea {
     max-width: 70%;
     max-height: 30%;
 }
-
-/* 
-.EDbuttons {
-    color: white;
-    padding: 10px;
-    background-color: black;
-    border-radius: 20px;
-    overflow: none;
-} */
 
 /* Caesar Part */
 #caesar {
