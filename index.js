@@ -147,7 +147,24 @@ caesarDecodeBtn.addEventListener('click', () => {
     outputCaesar.value = result;
 });
 
-//Brute Force
+//Enter
+function enter(cipher){
+    const text = navigator.clipboard.readText();
+    document.getElementById(`input${cipher}`).textContent = text;
+}
+document.getElementById('EnterAtbash').addEventListener('click',() => enter('Atbash'));
+document.getElementById('EnterCaesar').addEventListener('click',() => enter('Caesar'));
+document.getElementById('EnterVigener').addEventListener('click',() => enter('Vigener'));
+//Copy text
+function copy(cipher){
+    const value = document.getElementById(`output${cipher}`).value;
+    navigator.clipboard.writeText(value);
+}
+document.getElementById('copyVigenerText').addEventListener('click',() => copy('Vigener'));
+document.getElementById('copyCaesarText').addEventListener('click',() => copy('Caesar'));
+document.getElementById('copyAtbashText').addEventListener('click',() => copy('Atbash'));
+
+//Brute Force Caesar;
 document.getElementById('BruteForceBtn').addEventListener('click',() => {
     const text = document.getElementById('bruteForceText').value;
     const language = document.getElementById('BruteForceLanguage').value;
