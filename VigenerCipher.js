@@ -27,7 +27,8 @@ const alphabets = {
     ru: 'абвгдеёжзийклмнопрстуфцчшщьыъэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФЦЧШЩЬЫЪЭЮЯ .,!?',
 }
 
-function genPass(language, length) {
+//Generate the password;
+export function genPass(language, length) {
     if (language !== 'en' && language !== 'ru' && language !== 'ua') return 'Chouse the language from\n-ru\n-ua\n-en';
     const lan = alphabets[language];
     let res = '';
@@ -38,7 +39,7 @@ function genPass(language, length) {
 }
 
 
-function VigenereEncoder(pass, text, language) {
+export function VigenereEncoder(pass, text, language) {
     if (language !== 'en' && language !== 'ru' && language !== 'ua') return 'Chouse the language from\n-ru\n-ua\n-en';
     if (!pass) return 'Enter password or Enter: generate';
     if (!text) return 'Enter string';
@@ -63,10 +64,10 @@ function VigenereEncoder(pass, text, language) {
         codedText[i] + pas[j] >= lan.length ? letter = (codedText[i] + pas[j]) - lan.length : letter = codedText[i] + pas[j];
         newText += lan[letter];
     }
-    return newText;
+    return `${newText}\npassword: ${pass}`;
 }
 
-function VigenerDecoder(pass, text, language) {
+export function VigenerDecoder(pass, text, language) {
     if (language !== 'en' && language !== 'ru' && language !== 'ua') return 'Chouse the language from\n-ru\n-ua\n-en';
     if (!pass) return 'Enter key';
     if (!text) return 'Enter string';

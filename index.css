@@ -1,0 +1,150 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.describe{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.encodeDecode{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+button {
+    border: none;
+    background-color: rgba(212, 187, 187, 0.5);
+    padding: 7px;
+    border-radius: 20px;
+}
+
+#mainWrapper {
+    width: 100%;
+    /* background-color: blue; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+
+}
+
+#ciphers {
+    min-height: 50px;
+    border: 1px solid;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    gap: 5%;
+    list-style: none;
+    flex: 1;
+}
+
+.cipher {
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10px 0px 10px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 9;
+    width: 100%;
+    height: 90%;
+    text-align: center;
+}
+
+/*Vigener part*/
+#vigener {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 5px;
+    /* background-color: blue; */
+    animation: append 1s ease;
+}
+
+textarea {
+    outline: none;
+    border: 1px solid;
+    padding: 5px;
+    width: 60vw;
+    height: 30vh;
+    max-width: 70%;
+    max-height: 30%;
+}
+
+/* 
+.EDbuttons {
+    color: white;
+    padding: 10px;
+    background-color: black;
+    border-radius: 20px;
+    overflow: none;
+} */
+
+/* Caesar Part */
+#caesar {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    display: none;
+    animation: append 1s ease;
+}
+@keyframes append {
+    from {
+        opacity: 0;
+    }to {
+        opacity: 1;
+    }
+}
+#encodeDecodeCaesar{
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+#brotForceCaesarWrapper{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#EncodeDecodeCaesar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* Atbash Part */
+#atbash {
+    gap: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    display: none;
+    animation: append 1s ease;
+}

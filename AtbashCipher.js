@@ -23,7 +23,7 @@
 
 // Hello → Svool
 
-function atbashEncoder(text, language) {
+export function atbashEncoder(text, language) {
     if (language !== 'en' && language !== 'ru' && language !== 'ua') return 'Chouse the language from\n-ru\n-ua\n-en';
     if (!text) return 'Enter string';
     const alphabets = {
@@ -51,7 +51,7 @@ function atbashEncoder(text, language) {
     }
     return newText;
 }
-function atbashDecoder(text, language) {
+export function atbashDecoder(text, language) {
     if (language !== 'en' && language !== 'ru' && language !== 'ua') return 'Chouse the language from\n-ru\n-ua\n-en';
     if (!text) return 'Enter string';
     const alphabets = {
@@ -75,4 +75,3 @@ function atbashDecoder(text, language) {
     }
     return newText;
 }
-
