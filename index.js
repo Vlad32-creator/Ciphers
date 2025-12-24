@@ -149,8 +149,9 @@ caesarDecodeBtn.addEventListener('click', () => {
 
 //Enter
 function enter(cipher){
-    const text = navigator.clipboard.readText();
-    document.getElementById(`input${cipher}`).textContent = text;
+    navigator.clipboard.readText().
+    then(text => document.getElementById(`input${cipher}`).innerText = text).
+    catch(err => console.log(err));
 }
 document.getElementById('EnterAtbash').addEventListener('click',() => enter('Atbash'));
 document.getElementById('EnterCaesar').addEventListener('click',() => enter('Caesar'));
