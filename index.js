@@ -1,7 +1,7 @@
 import { atbashEncoder } from "./AtbashCipher.js";
 import { VigenerDecoder, VigenereEncoder } from "./VigenerCipher.js";
 import { caesarDecoder, caesarEncoder, bruteForceCaesar } from "./CaesarCipher.js";
-import { Xor } from "./Xor.js";
+import { XorDecrypt,XorEncrypt } from "./Xor.js";
 
 const vigenerCipher = document.getElementById('vigener');
 const caesarCipher = document.getElementById('caesar');
@@ -95,7 +95,13 @@ function nav(cipher) {
 document.getElementById('xorEncodeBtn').addEventListener('click', () => {
     const value = document.getElementById('inputXor').value;
     const key = document.getElementById('XorKey').value;
-    const result = Xor(value, key);
+    const result = XorEncrypt(value, key);
+    document.getElementById('outputXor').value = result;
+})
+document.getElementById('xorDecodeBtn').addEventListener('click', () => {
+    const value = document.getElementById('inputXor').value;
+    const key = document.getElementById('XorKey').value;
+    const result = XorDecrypt(value, key);
     document.getElementById('outputXor').value = result;
 })
 
